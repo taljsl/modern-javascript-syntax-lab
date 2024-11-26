@@ -267,3 +267,95 @@ let pizza = 'tasty';
 console.log('exercise 9 output below \n')
 let tasteTest = pizza ? 'Yum' : 'Yuck'
 console.log(tasteTest)
+
+// boolean gates review
+// the first falsy value is always what will be assigned when using &&
+
+// const result = false && 'foo';
+// console.log(result); // Output: false
+
+// const result = 'hello' && '';
+// console.log(result); // Output: ''
+
+// when both values are truthy the last output will be selected
+// const result = 'foo' && 'bar';
+// console.log(result); // Output: 'bar'
+
+// 💡 Remember, in JavaScript, falsy values include '' (empty strings), 0, null, undefined, NaN, and false. Everything else is considered truthy.
+
+// when using || the first truthy value encountered will be returned, if all are falsy it will return the last value
+
+
+// const result = '' || 'foo';
+// console.log(result); // Output: 'foo'
+let myVar = 0
+const result1 = 'bar' && 'foo';
+const result2 = false || 243;
+const result3 = 42 && false;
+const result4 = myVar || 3000;
+
+console.log('result1:', result1); // expected foo
+console.log('result2:', result2); // expected 243
+console.log('result3:', result3);// expected false
+console.log('result4:', result4); // 3000
+
+
+
+// Exercise 10
+console.log('Ex 10 Outputs below \n')
+// 1. SET LANGUAGE
+
+// Construct a single line of code that assigns a default value using the logical OR operator. This line should match the logic of the following statement: 
+
+// "LANG is equal to localLangConfig or the default value of English."
+
+const localLangConfig = null;  // Change to 'es', 'fr', etc., or keep it null
+// a. Create a variable called LANG
+// b. Assign LANG the value of localLangConfig or 'en' as a default
+
+// Your code here
+const LANG = localLangConfig || 'English'
+
+// Log the result
+console.log('Language setting:', LANG);
+
+// 2. SET WEBSITE THEME
+
+const userSavedTheme = null; // Change to 'dark', 'contrast', etc., or keep it null
+
+// a. Create a variable called USER_THEME
+// b. Assign USER_THEME the value of userSavedTheme or 'light' as a default
+
+// Your code here
+
+const USER_THEME = userSavedTheme || 'light'
+// Log the result
+console.log('User theme setting:', USER_THEME);
+
+// Optional Chaining
+// const adventurer = {
+//     name: 'Alice',
+//   };
+  
+//   console.log(adventurer.dog.name); // TypeError: Cannot read properties of undefined (reading 'name')
+  
+// const adventurer = {
+//     name: 'Alice',
+//   };
+  
+//   let dog = adventurer.dog?.name;
+  
+//   console.log(dog); // undefined
+  
+
+  // Now check for `cat.age` on `adventurer`. See how it errors out? Use optional chaining in a console.log that it returns undefined instead.
+console.log('Exercise 11 Below \n')
+const adventurer = {
+    name: 'Alice',
+  };
+  
+  let cat = adventurer.cat?.age; // Your code here
+  
+
+  console.log(cat);
+  
