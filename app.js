@@ -191,11 +191,79 @@ console.log(fruitInventory); // { bananas: 5 }
 // Use propertyName as a dynamic key in userProfile, assigning a relevant value.
 
 // Your code here
-const propertyName = "aUniqueUsername"
-userProfile = {[propertyName]:'Some Name', }
+const propertyName = "username"
+const userProfile = {[propertyName]:'Some Name', }
 
 console.log('Exercise 6 Answer below\n')
 console.log(userProfile)
 
-// import and export review
+// default parameters review
+function addThreeNumbers(numA, numB, numC) {
+    return numA + numB + numC;
+  }
+  
+console.log(  addThreeNumbers(2))
 
+function addThreeNumbers2(numA, numB = 2, numC = 1) {
+    return numA + numB + numC;
+  }
+  
+  console.log(  addThreeNumbers2(2))
+
+  function addThreeNumbers3(numA = 1, numB = 2, numC = 1) {
+    return numA + numB + numC;
+  }
+//   note on the below the output is still 5 because the value of 1 is overwritten by the passed value of 2
+console.log(  addThreeNumbers3(2))
+  
+
+// Create a function that takes two parameters, `noun` and `adjective`, both with the following respective default values:
+
+// 1. `cat`
+
+// 2. `white`
+
+// The function should log a sentence 'The cat is white.' by default. The function should substitute the appropriate parameters when supplied arguments.
+
+// Your code here
+const createSentence = (noun='cat', adjective = 'white') => {
+console.log(`The ${noun} is ${adjective}`)
+}
+
+console.log("Exercise 8 output below \n")
+createSentence()
+createSentence('dog','green')
+
+
+// Ternary operator
+console.log('Ternary Operator Lesson Output\n')
+const age = 22;
+let access;
+
+if (age > 21) {
+  access = 'Yes';
+} else {
+  access = 'No';
+}
+
+console.log(access); // 'Yes'
+
+const ages = 22;
+let accesses = ages > 21 ? 'Yes' : 'No';
+
+console.log(accesses); // 'Yes'
+
+// Convert the following `if...else` statement in to a ternary:
+
+let pizza = 'tasty';
+
+// if (pizza === 'tasty') {
+//   console.log('yum');
+// } else {
+//   console.log('yuck');
+// }
+
+// Your code here
+console.log('exercise 9 output below \n')
+let tasteTest = pizza ? 'Yum' : 'Yuck'
+console.log(tasteTest)
