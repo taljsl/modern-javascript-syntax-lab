@@ -75,3 +75,127 @@ console.log('Object Destructuring Answer \n')
 const {make,model} = car
 console.log(make)
 console.log(model)
+
+
+// Spread lesson
+const originalArray = [1, 2, 3];
+const duplicateArray = [...originalArray];
+
+console.log(duplicateArray); // [1, 2, 3]
+
+const originalArrays = [1, 2, 3];
+const referenceArray = originalArrays; // referenceArray is now a reference to originalArray
+
+referenceArray.push(4); // Modifying referenceArray also modifies originalArray
+console.log(originalArrays); // [1, 2, 3, 4]
+
+const fruits = ['apple', 'orange', 'banana'];
+const vegetables = ['broccoli', 'carrot', 'spinach'];
+
+const fruitsAndVegetables = [...fruits, ...vegetables];
+
+console.log(fruitsAndVegetables); // ['apple', 'orange', 'banana', 'broccoli', 'carrot', 'spinach']
+
+// Exercise 4
+
+// Duplicate the following array using the spread operator and assign it to `controversialPizzaToppings`. Then, log the variable.
+
+const pizzaToppingss = ['Pineapple', 'Olives', 'Anchovies'];
+
+// Your code here
+const controversialPizzaToppings = [...pizzaToppingss]
+
+
+console.log('Exercise 4 solution here \n')
+console.log(controversialPizzaToppings)
+
+
+// Spreading objects
+
+// const originalObject = {
+//     foo: 'Hello',
+//     bar: 100,
+//   };
+  
+//   const clonedObject = { ...originalObject };
+//   console.log('Clone: ', clonedObject); // { foo: 'Hello', bar: 100 }
+
+//   const originalObject = {
+//     foo: 'Hello',
+//     bar: 100,
+//   };
+  
+//   const clonedObject = originalObject;
+//   clonedObject.foo = 'Goodbye';
+  
+//   console.log(originalObject); // { foo: 'Goodbye', bar: 100 }
+  
+  const originalObject = {
+    foo: 'Hello',
+    bar: 100,
+  };
+  
+  // Copy the properties of originalObject:
+  const clonedObject = { ...originalObject };
+  
+  // Update the properties of clonedObject:
+  clonedObject.foo = 'Goodbye';
+  clonedObject.bar = 0;
+  
+  console.log('Original: ', originalObject); // { foo: 'Hello', bar: 100 }
+  console.log('Clone: ', clonedObject); // { foo: 'Goodbye', bar: 0 }
+  
+
+
+  // Duplicate the following object and spread its values into a new variable `myCar`.
+
+const cars = {
+    make: 'Audi',
+    model: 'q5',
+  };
+  
+  // Change the `model` property of `myCar` to 'q7'. Log both objects.
+  
+  // Your code here
+  const myCar = {...cars}
+  myCar.model = 'q7'
+
+
+  console.log('Exercise 5 Solution Below\n')
+  console.log('Original Car: ', cars)
+  console.log('My Car: ', myCar)
+
+
+//   Dynamic Keys in Objects
+// const fruitInventory = {
+//     apples: 2,
+//     oranges: 4,
+//   };
+  
+//   const selectedFruit = 'apples'; // Variable as a dynamic key
+//   const selectedFruitCount = fruitInventory[selectedFruit];
+  
+//   console.log(selectedFruitCount); // 2
+  
+  const fruitType = 'bananas'; // Variable as a dynamic key
+
+const fruitInventory = {
+  [fruitType]: 5,
+};
+
+console.log(fruitInventory); // { bananas: 5 }
+
+
+// Create an object named userProfile. 
+// Define a variable named propertyName and assign a string to it (like a username, age, or email). 
+// Use propertyName as a dynamic key in userProfile, assigning a relevant value.
+
+// Your code here
+const propertyName = "aUniqueUsername"
+userProfile = {[propertyName]:'Some Name', }
+
+console.log('Exercise 6 Answer below\n')
+console.log(userProfile)
+
+// import and export review
+
